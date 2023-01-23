@@ -1,0 +1,26 @@
+.post-div {
+  background-color: #ffffff;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  border-radius: 8px;
+}
+.profile-img-post-feed img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  outline: 3px solid white;
+  object-fit: cover;
+}
+
+.name-user-p {
+  font-size: 0.9rem;
+}
+
+.title-user-p {
+  font-size: 0.9rem;
+  margin-top: -2px;
+}
+.responsive-img {
+  width: 100%;
+  height: auto;
+}

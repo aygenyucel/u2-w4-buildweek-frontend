@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #0a66c2;
+  --color-text-gray: #929292;
+  --color-text-dark-gray: #6e6e6e;
+  --card-border: 1px solid #dcdcdc;
+  --color-btn-hover: #e2f0fe;
+  --color-gray-btn-hover: #ebebeb;
+}
+.about-card {
+  border: var(--card-border);
+  border-radius: 10px;
+}
+.header-card {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

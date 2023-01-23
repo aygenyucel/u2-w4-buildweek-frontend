@@ -1,0 +1,77 @@
+:root {
+  --primary-color: #0a66c2;
+  --color-text-gray: #929292;
+  --color-text-dark-gray: #6e6e6e;
+  --card-border: 1px solid #dcdcdc;
+  --color-btn-hover: #e2f0fe;
+  --color-gray-btn-hover: #ebebeb;
+}
+
+.main-div-profilebar {
+  border-radius: 10px;
+  border: var(--card-border);
+  padding-bottom: 20px;
+  background: white;
+}
+
+.main-div-profilebar-background img {
+  width: 100%;
+  max-height: 195.5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-img-feed img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  outline: 5px solid white;
+  object-fit: cover;
+  margin-top: -17px;
+}
+
+.nameAndSurname {
+  font-weight: bold;
+  color: var(--color-text-dark-gray);
+}
+
+.myTitle {
+  font-size: 0.9rem;
+  color: var(--color-text-dark-gray);
+}
+
+.myArea {
+  font-size: 0.9rem;
+  color: var(--color-text-dark-gray);
+}
+
+.myEmail {
+  font-size: 0.9rem;
+  color: var(--color-text-dark-gray);
+}
+
+.second-card {
+  color: var(--color-text-dark-gray);
+  margin: 3px;
+}
+
+.second-card p {
+  font-size: 0.9rem;
+}
+
+.events {
+  color: var(--primary-color);
+}
+
+.bolder {
+  font-weight: bolder;
+}
+.main-container-profile-bar {
+  width: 100%;
+}
+@media screen and (max-width: 780px) {
+  .second-card-main {
+    display: none;
+  }
+}

@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #0a66c2;
+  --color-text-gray: #929292;
+  --color-text-dark-gray: #6e6e6e;
+  --card-border: 1px solid #dcdcdc;
+  --color-btn-hover: #e2f0fe;
+  --color-gray-btn-hover: #ebebeb;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.profile-main-card {
+  /* background-color: rgb(188, 144, 144); */
+
+  border-radius: 10px;
+  border: var(--card-border);
+  padding-bottom: 20px;
+}
+.container > div {
+  padding-inline: 0.8rem;
+}
+
+.profile-main-card-background {
+  position: relative;
+}
+
+.profile-main-card-background img {
+  width: 100%;
+  max-height: 195.5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-main-card-middle .edit-icon,
+.profile-main-card-middle .bell-icon {
+  color: var(--color-text-dark-gray);
+  font-size: 1.3rem;
+}
+
+.edit-icon,
+#dropdown-item-button {
+  background-color: white !important;
+  border: transparent !important;
+}
+
+#dropdown-item-button {
+  background-color: transparent !important;
+  border: 1px solid gray !important;
+  width: 100% !important;
+  color: black !important;
+  opacity: 0.5;
+}
+
+.stubborn-btn {
+  justify-self: flex-end !important;
+  align-self: flex-end !important;
+}
+
+.profile-img img {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  outline: 5px solid white;
+  object-fit: cover;
+  position: absolute;
+  bottom: -35px;
+  left: 30px;
+}
+
+/* .profile-main-card-bottom {
+  transform: translateY(-120px);
+} */
+
+/* .profile-main-card-middle,
+.profile-main-card-info {
+  transform: translateY(-120px);
+} */
+
+.profile-main-card-middle .edit-ico .container > div {
+  margin-inline: 15px;
+}
+
+.profile-main-card-info .main-info .profile-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile-main-card-info .profile-location,
+.profile-connections .connections-number {
+  color: var(--color-text-gray);
+  font-size: 0.9rem;
+}
+
+.profile-connections .connections-number span {
+  font-weight: 600;
+}
+
+.profile-main-card-info .profile-contact-info-btn a,
+.profile-main-card-info .profile-connections a {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* .profile-buttons .open-to-btn,
+.profile-buttons .add-profile-section-btn,
+.profile-buttons .more-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding-inline: 17px;
+  padding-block: 4px;
+} */
+
+.profile-buttons .left-btn,
+.profile-buttons .middle-btn,
+.profile-buttons .right-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding-inline: 17px;
+  padding-block: 4px;
+}
+
+.profile-buttons .left-btn {
+  background-color: var(--primary-color);
+}
+
+.profile-buttons .middle-btn {
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.profile-buttons .middle:hover {
+  background-color: var(--color-btn-hover);
+  color: var(--primary-color);
+}
+
+.profile-buttons .right-btn {
+  border: 1px solid var(--color-text-gray);
+  color: var(--color-text-gray);
+  background-color: transparent;
+}
+
+.profile-buttons .right-btn:hover {
+  border: 1px solid var(--color-text-gray);
+  background-color: var(--color-gray-btn-hover);
+  color: var(--color-text-gray);
+}
+
+.company-info .company-logo img {
+  height: 32px;
+  width: 32px;
+  background-color: #0a66c2;
+  object-fit: cover;
+}
+.company-info .company-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* @media only screen and (max-width: 1200px) {
+  .profile-main-card-background {
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .profile-main-card-background {
+    padding-bottom: 70px;
+  }
+} */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .profile-main-card-background {
+    padding-bottom: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .profile-main-card-background {
+    padding-bottom: 30px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .profile-main-card-background {
+    padding-bottom: 40px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .profile-main-card-background {
+    padding-bottom: 25px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .profile-main-card-background {
+    padding-bottom: 15px;
+  }
+}

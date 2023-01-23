@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #0a66c2;
+  --color-text-gray: #929292;
+  --color-text-dark-gray: #6e6e6e;
+  --card-border: 1px solid #dcdcdc;
+  --color-btn-hover: #e2f0fe;
+  --color-gray-btn-hover: #ebebeb;
+  --color-progress: #56687a;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.suggested-text-area {
+  border: var(--card-border);
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.suggested-buttons .gray-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding-inline: 17px;
+  padding-block: 4px;
+}
+
+.suggested-buttons .gray-btn {
+  border: 1px solid var(--color-text-gray);
+  color: var(--color-text-gray);
+  background-color: transparent;
+}
+
+.suggested-buttons .gray-btn:hover {
+  border: 1px solid var(--color-text-gray);
+  background-color: var(--color-gray-btn-hover);
+  color: var(--color-text-gray);
+}
+
+.suggestion-progress-bar {
+  width: 100%;
+  background-color: var(--color-gray-btn-hover);
+  height: 8px;
+  border-radius: 4px;
+}
+
+.suggestion-progress {
+  width: 80%;
+  background-color: var(--color-progress);
+  height: 8px;
+  border-radius: 4px;
+}

@@ -1,0 +1,12 @@
+/* .main-card-div {
+  width: 100%;
+} */
+.sidebar-div {
+  width: 350px;
+}
+@media only screen and (max-width: 850px) {
+  .sidebar-div {
+    display: none;
+    visibility: hidden;
+  }
+}

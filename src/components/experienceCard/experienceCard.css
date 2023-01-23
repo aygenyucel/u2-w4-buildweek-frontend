@@ -1,0 +1,59 @@
+:root {
+  --primary-color: #0a66c2;
+  --color-text-gray: #929292;
+  --color-text-dark-gray: #6e6e6e;
+  --card-border: 1px solid #dcdcdc;
+  --color-btn-hover: #e2f0fe;
+  --color-gray-btn-hover: #ebebeb;
+}
+.experience-card {
+  border: var(--card-border);
+  border-radius: 10px;
+}
+.company-logo img {
+  height: 48px;
+  width: 48px;
+}
+
+.about-row {
+  font-size: 0.9rem;
+}
+
+.header-card {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experience-info .experience-role {
+  font-weight: 600;
+}
+
+.experience-info .experience-company {
+  font-size: 0.9rem;
+}
+
+.experience-date {
+  color: var(--color-text-gray);
+  font-size: 0.9rem;
+}
+.text-divider {
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  background-color: var(--color-text-gray);
+  margin-inline: 4px;
+}
+
+.experience-description {
+  font-size: 0.9rem;
+}
+
+.edit-icon {
+  color: var(--color-text-dark-gray) !important;
+  font-size: 1.3rem !important;
+}
+
+.edit-icon {
+  background-color: white !important;
+  border: transparent !important;
+}

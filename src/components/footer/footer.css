@@ -1,0 +1,46 @@
+.footer_logo {
+  width: 100px;
+}
+.footer-div {
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+.footer_dropdown {
+  display: block;
+  padding: 0px !important;
+}
+
+#dropdown-basic-button {
+  background-color: white !important;
+  color: black !important;
+  border-color: black;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+
+.footer_link {
+  color: black !important;
+}
+
+.footer_link:hover {
+  color: lightblue !important;
+  text-decoration: underline;
+}
+
+.footer_label {
+  color: black !important;
+  opacity: 0.8;
+  font-weight: 2;
+  font-size: 14px;
+}
+
+.dropdown-toggle::after {
+  margin-left: 5em;
+}
+
+.footer-logo-profile {
+  background-color: blue;
+}

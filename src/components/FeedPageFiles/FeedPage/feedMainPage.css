@@ -1,0 +1,37 @@
+button {
+  color: rgb(148, 148, 148);
+  border: none;
+  border-radius: 5px;
+}
+
+.profileBar {
+  width: 30vw;
+}
+.main-content {
+  width: 40vw;
+}
+
+.side-footer {
+  width: 30vw;
+}
+.main-container-feed-page {
+  display: flex;
+}
+@media screen and (max-width: 1340px) {
+  .side-footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .profileBar {
+    width: 100vw;
+  }
+  .main-content {
+    width: 100vw;
+  }
+  .main-container-feed-page {
+    display: flex;
+    flex-direction: column;
+  }
+}

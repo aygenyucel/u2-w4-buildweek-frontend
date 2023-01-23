@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #0a66c2;
+  --color-text-gray: #929292;
+  --color-text-dark-gray: #6e6e6e;
+  --card-border: 1px solid #dcdcdc;
+  --color-btn-hover: #e2f0fe;
+  --color-gray-btn-hover: #ebebeb;
+  --color-background: #f3f2ef;
+  --color-background-card: #ffffff;
+}
+
+.sidebar-right {
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: var(--color);
+  padding-right: 15px;
+  width: 100%;
+}
+
+.content-div1 {
+  width: 100%;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  background-color: var(--color-background-card);
+}
+
+.viewer-profiles .header-card {
+  font-size: 1.3rem;
+}
+.viewer-profiles {
+  background-color: var(--color-background-card);
+  margin-top: 10px;
+  height: fit-content;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 25%;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.trans-line {
+  border: rgb(145, 144, 144) 1px solid;
+  border-radius: 23px;
+  width: 90%;
+  opacity: 0.8;
+}
+
+.message {
+  background-color: white;
+  color: black;
+  border: black 2px solid;
+  cursor: pointer;
+  border-radius: 23px;
+  padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+}
+
+.bigger-font {
+  font-size: 20px;
+  color: black !important;
+}
+
+.br-100 {
+  border-radius: 50% !important;
+}
+
+.font-w-bold {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.opaque-much {
+  opacity: 0.8;
+}
+
+.viewer-picture img {
+  font-size: 0.9rem;
+}
+
+.message-btn {
+  font-weight: 600;
+  border-radius: 50px;
+  padding-inline: 17px;
+  padding-block: 4px;
+}
+
+.message-btn {
+  border: 1px solid var(--color-text-gray);
+  color: var(--color-text-gray);
+  background-color: transparent;
+}
+
+.message-btn:hover {
+  border: 1px solid var(--color-text-gray);
+  background-color: var(--color-gray-btn-hover);
+  color: var(--color-text-gray);
+}
