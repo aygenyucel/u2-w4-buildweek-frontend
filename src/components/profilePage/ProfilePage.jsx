@@ -1,6 +1,6 @@
 import ProfileMainCard from "../profileMainCard/ProfileMainCard";
 import SideBar from "../sidebar/SideBar";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./profilePage.css";
 import ExperienceCard from "../experienceCard/ExperienceCard";
 import { useDispatch, useSelector } from "react-redux";

@@ -8,7 +8,10 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import ProfileBar from "../profile_bar/profileBar";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getProfileAction } from "../../../redux/actions";
+import {
+  getProfileAction,
+  getProfilesListAction,
+} from "../../../redux/actions";
 import RightSideBar from "../rightSideBar/RightSideBar";
 
 const FeedMainPage = () => {
@@ -20,9 +23,14 @@ const FeedMainPage = () => {
   console.log(profileMainData);
   const dispatch = useDispatch();
 
+  const users = useSelector((state) => state.listOfProfiles.profilesList);
+
   useEffect(() => {
     dispatch(getProfileAction());
+    dispatch(getProfilesListAction()); //for the right sidebar
   }, []);
+
+  console.log("fdsfbhdskjfhsdjf", users);
   return (
     <>
       <Container className="main-container-feed-page">
@@ -38,7 +46,7 @@ const FeedMainPage = () => {
           {myPosts ? <GetMyPosts /> : <GetPosts />}
         </div>
         <div className="side-footer">
-          <RightSideBar />
+          <RightSideBar users={users} />
         </div>
       </Container>
     </>

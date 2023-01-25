@@ -6,26 +6,29 @@ export const GET_EXPERIENCES_USER = "GET_EXPERIENCES_USER";
 export const GET_PROFILES_LIST = " GET_PROFILES_LIST";
 export const GET_POSTS_LIST = "GET_POSTS_LIST";
 export const EDIT_PROFILE = "EDIT_PROFILE";
-export const UPDATE_EXPERIENCE = "UPDATE_EXPERIENCE"
-export const DELETE_EXPERIENCE = "DELETE_EXPERIENCE"
+export const UPDATE_EXPERIENCE = "UPDATE_EXPERIENCE";
+export const DELETE_EXPERIENCE = "DELETE_EXPERIENCE";
 
 export const getProfileAction = () => {
-  const options = {
-    method: "GET",
-    headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
-    },
-  };
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     Authorization:
+  //       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
+  //   },
+  // };
   return async (dispatch, getState) => {
     try {
+      // const response = await fetch(
+      //   `https://striveschool-api.herokuapp.com/api/profile/me`,
+      //   options
+      // );
       const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/me`,
-        options
+        `http://localhost:3001/users/63d1051c7632523ed24df2df`
       );
       if (response.ok) {
         const profileData = await response.json();
-        // console.log("Get user profile:", profileData);
+        console.log("Get user profile:", profileData);
         dispatch({
           type: GET_PROFILE,
           payload: profileData,
@@ -48,7 +51,7 @@ export const getExperiencesAction = () => {
     method: "GET",
     headers: {
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
     },
   };
   return async (dispatch, getState) => {
@@ -74,19 +77,20 @@ export const getExperiencesAction = () => {
 };
 
 export const getUserProfileAction = (userId) => {
-  const options = {
-    method: "GET",
-    headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
-    },
-  };
+  // const options = {
+  //   method: "GET",
+  //   headers: {
+  //     Authorization:
+  //       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
+  //   },
+  // };
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(
-        `https://striveschool-api.herokuapp.com/api/profile/${userId}`,
-        options
-      );
+      // const response = await fetch(
+      //   `https://striveschool-api.herokuapp.com/api/profile/${userId}`,
+      //   options
+      // );
+      const response = await fetch(`http://localhost:3001/users/${userId}`);
       if (response.ok) {
         const userProfileData = await response.json();
         // console.log("Get another user profile", userProfileData);
@@ -108,7 +112,7 @@ export const getUserExperiencesAction = (userId) => {
     method: "GET",
     headers: {
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
     },
   };
   return async (dispatch, getState) => {
@@ -134,18 +138,21 @@ export const getUserExperiencesAction = (userId) => {
 
 export const getProfilesListAction = () => {
   return async (dispatch) => {
-    const options = {
-      method: "GET",
-      headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
-      },
-    };
+    // const options = {
+    //   method: "GET",
+    //   headers: {
+    //     Authorization:
+    //       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
+    //   },
+    // };
     try {
-      let response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/profile/",
-        options
-      );
+      // let response = await fetch(
+      //   "https://striveschool-api.herokuapp.com/api/profile/",
+      //   options
+      // );
+      let response = await fetch("http://localhost:3001/users/", {
+        method: "GET",
+      });
       if (response.ok) {
         let data = await response.json();
         dispatch({
@@ -167,7 +174,7 @@ export const getFeedPostsAction = () => {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
       },
     };
     try {
@@ -207,7 +214,7 @@ export const updateEditAction = (name, surname, bio, title, area) => {
       body: JSON.stringify(changedDetails),
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
         "Content-Type": "application/json",
       },
     };
@@ -240,7 +247,7 @@ export const createNewPostAction = (textPost) => {
       headers: {
         "Content-type": "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
       },
       body: JSON.stringify(newPost),
     };
@@ -266,7 +273,7 @@ export const deletePostAction = (idPost) => {
       method: "DELETE",
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
       },
     };
     try {
@@ -295,7 +302,7 @@ export const editPostAction = (idPost, textPost) => {
       headers: {
         "Content-type": "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzlhZTc1Y2U0OGY2MzAwMTUzYTUzMmIiLCJpYXQiOjE2NzEwOTYyMTMsImV4cCI6MTY3MjMwNTgxM30.7Rm2vX2T4244BipRvt_pccRXV7K35csrQyIsQsgfylE",
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2QwZTMzZjZiNTdkYjAwMTVjMTFlOGQiLCJpYXQiOjE2NzQ2MzQwNDgsImV4cCI6MTY3NTg0MzY0OH0.j_R__Lzp4ztHISB2sb3Ih-woHNCs40Q5O6NI6Padi9g",
       },
       body: JSON.stringify(newPost),
     };
@@ -316,7 +323,10 @@ export const editPostAction = (idPost, textPost) => {
   };
 };
 
-export const updateExperienceAction = ({role, company, startDate, endDate, description}, userId) => {
+export const updateExperienceAction = (
+  { role, company, startDate, endDate, description },
+  userId
+) => {
   const changedExperience = {
     role: role,
     company: company,

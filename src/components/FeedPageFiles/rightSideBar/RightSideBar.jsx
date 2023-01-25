@@ -1,37 +1,62 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { useEffect } from "react";
-import { getProfilesListAction } from "../../../redux/actions/index";
-import { useDispatch, useSelector } from "react-redux";
 import { FiArrowRight } from "react-icons/fi";
 import { AiOutlinePlus } from "react-icons/ai";
 import "./rightSideBar.css";
 // import { BsInfoLg } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-export default function RightSideBar() {
-  const dispatch = useDispatch();
-  const users = useSelector((state) => state.listOfProfiles.profilesList);
-
-  useEffect(() => {
-    dispatch(getProfilesListAction());
-  }, []);
-
-  console.log(users);
+const RightSideBar = ({ users }) => {
   return (
     <>
       <div className=" mb-2 d-flex flex-column main-div-profile-sidebar">
         <div>
           <h6 className="title-bar">People also wiewed</h6>
         </div>
+        <Link to={`/profile/${users[8]?._id}`}>
+          <div className="user-info-feed-side mt-3">
+            <div className="profile-img-feed-side d-flex justify-content-center">
+              <img src={users[8]?.image} alt="..." />
+            </div>
+
+            <div className="user-info-feed-side">
+              <h6 className="">{users[8]?.name}</h6>
+              <p className="user-title-p">{users[8]?.title}</p>
+            </div>
+            <div>
+              <div className="rounded-button">
+                <AiOutlinePlus className="mr-1 p-0" />
+                Follow
+              </div>
+            </div>
+          </div>
+        </Link>
+        <Link to={`/profile/${users[15]?._id}`}>
+          <div className="user-info-feed-side mt-3">
+            <div className="profile-img-feed-side d-flex justify-content-center">
+              <img src={users[15]?.image} alt="..." />
+            </div>
+
+            <div className="user-info-feed-side">
+              <h6 className="">{users[15]?.name}</h6>
+              <p className="user-title-p">{users[15]?.title}</p>
+            </div>
+            <div>
+              <div className="rounded-button">
+                <AiOutlinePlus className="mr-1 p-0" />
+                Follow
+              </div>
+            </div>
+          </div>
+        </Link>
 
         <div className="user-info-feed-side mt-3">
           <div className="profile-img-feed-side d-flex justify-content-center">
-            <img src={users[61]?.image} alt="..." />
+            <img src={users[9]?.image} alt="..." />
           </div>
 
           <div className="user-info-feed-side">
-            <h6 className="">{users[61]?.name}</h6>
-            <p className="user-title-p">{users[61]?.title}</p>
+            <h6 className="">{users[9]?.name}</h6>
+            <p className="user-title-p">{users[9]?.title}</p>
           </div>
           <div>
             <div className="rounded-button">
@@ -40,48 +65,15 @@ export default function RightSideBar() {
             </div>
           </div>
         </div>
-        <div className="user-info-feed-side mt-3">
-          <div className="profile-img-feed-side d-flex justify-content-center">
-            <img src={users[62]?.image} alt="..." />
-          </div>
-
-          <div className="user-info-feed-side">
-            <h6 className="">{users[62]?.name}</h6>
-            <p className="user-title-p">{users[62]?.title}</p>
-          </div>
-          <div>
-            <div className="rounded-button">
-              <AiOutlinePlus className="mr-1 p-0" />
-              Follow
-            </div>
-          </div>
-        </div>
 
         <div className="user-info-feed-side mt-3">
           <div className="profile-img-feed-side d-flex justify-content-center">
-            <img src={users[79]?.image} alt="..." />
+            <img src={users[17]?.image} alt="..." />
           </div>
 
           <div className="user-info-feed-side">
-            <h6 className="">{users[79]?.name}</h6>
-            <p className="user-title-p">{users[79]?.title}</p>
-          </div>
-          <div>
-            <div className="rounded-button">
-              <AiOutlinePlus className="mr-1 p-0" />
-              Follow
-            </div>
-          </div>
-        </div>
-
-        <div className="user-info-feed-side mt-3">
-          <div className="profile-img-feed-side d-flex justify-content-center">
-            <img src={users[77]?.image} alt="..." />
-          </div>
-
-          <div className="user-info-feed-side">
-            <h6 className="">{users[77]?.name}</h6>
-            <p className="user-title-p">{users[77]?.title}</p>
+            <h6 className="">{users[17]?.name}</h6>
+            <p className="user-title-p">{users[17]?.title}</p>
           </div>
           <div>
             <div className="rounded-button">
@@ -130,4 +122,6 @@ export default function RightSideBar() {
       </div>
     </>
   );
-}
+};
+
+export default RightSideBar;
